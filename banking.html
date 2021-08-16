@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CDN -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+
+    <title>Banking</title>
+</head>
+
+<body>
+
+    <header class=''>
+
+        <h1 class='text-4xl text-center font-semibold text-purple-800'>Premier Bank</h1>
+        <p class="text-sm font-semibold text-center mb-4">Saint Luca Branch, New Jersey, USA</p>
+
+    </header>
+
+    <main>
+
+
+        <section>
+
+            <div class="container mx-auto bg-gray-800 p-4">
+
+                <div class="account-info text-white w-4/5 mx-auto">
+
+                    <h3 class='text-xl text-center font-medium underline mb-4'>Account Information</h3>
+
+                    <p class='text-md font-medium'>Account Number: 55-3423-2345</p>
+                    <p class='text-md font-medium'>Account Holder: Md. Minhazul Haque</p>
+                    <p class='text-md font-medium'>User ID: 323564</p>
+                    <p class='text-md font-medium'>Email: <span id='user-email'></span></p>
+
+                </div>
+
+                <div class="calculation text-center grid grid-cols-3 mt-4 gap-x-1">
+
+                    <div class='bg-green-400'>
+
+                        <h2 class='text-xl font-semibold'>Deposit</h2>
+                        <span class='text-2xl font-bold'>$<h3 id='deposit-text' class='inline'>0</h3></span>
+
+                    </div>
+
+                    <div class='bg-red-400'>
+
+                        <h2 class='text-xl font-semibold'>Withdrawal</h2>
+                        <span class='text-2xl font-bold'>$<h3 id='withdraw-text' class='inline'>0</h3></span>
+
+                    </div>
+
+                    <div class='bg-yellow-300'>
+
+                        <h2 class='text-xl font-semibold'>Balance</h2>
+                        <span class='text-2xl font-bold'>$
+                            <h3 class='inline' id='balance-text'>1200</h3>
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="calculation-inputs grid grid-cols-2 gap-x-4 justify-items-center mt-8">
+
+                    <div class="">
+
+                        <input id='deposit-input' class='border-2 border-gray-500 block px-3 py-1 rounded' type="number"
+                            placeholder='Enter Deposit Amount'>
+                        <button id='deposit-btn'
+                            class='bg-green-500 px-2 py-px rounded mt-2 font-semibold text-white'>Deposit</button>
+
+                    </div>
+
+                    <div class="">
+
+                        <input id='withdraw-input' class='border-2 border-gray-500 block px-3 py-1 rounded'
+                            type="number" placeholder='Enter withdrawal Amount'>
+                        <button id='withdraw-btn'
+                            class='bg-green-500 px-2 py-px rounded mt-2 font-semibold text-white'>Withdraw</button>
+                    </div>
+
+                </div>
+
+                <div class="complete-transaction flex justify-center mt-8">
+
+
+                    <button id='complete-transaction'
+                        class='bg-red-600 text-xl font-semibold px-2 py-px text-white rounded-xl'>Complete
+                        Transaction</button>
+
+                    <h2 id='trnx-msg' class='hidden text-green-300 font-semibold text-center'>Transaction Successful.
+                        Thank you for being
+                        with Premier Bank.
+                    </h2>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <script src='banking.js'></script>
+</body>
+
+</html>

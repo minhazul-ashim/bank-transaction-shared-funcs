@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CDN -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <title>Bank Transaction</title>
+</head>
+
+<body>
+
+    <header>
+
+        <h1 class='text-4xl text-center font-semibold text-purple-800 my-4'>Premier Bank</h1>
+
+    </header>
+
+    <main>
+
+        <section>
+
+            <h3 class='text-xl font-semibold text-center'>Enter login infomation</h3>
+
+            <div class="form-container flex flex-col items-center bg-gray-400 py-8 mt-4 w-3/4 mx-auto rounded-xl">
+
+                <div class="mb-2"><input id='user-email' type="email" class='border-2 border-purple-500 px-2 rounded'
+                        placeholder="Enter your Email">
+                </div>
+
+
+                <div class="mb-2"> <input id='user-password' type="password"
+                        class='border-2 border-purple-500 px-2 rounded' placeholder="Enter your password">
+                </div>
+
+                <button id='login-submit'
+                    class='bg-purple-700 px-3 py-1 mt-1 rounded font-semibold text-white'>Submit</button>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src='main.js'></script>
+</body>
+
+</html>

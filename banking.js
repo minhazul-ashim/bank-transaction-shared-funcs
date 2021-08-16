@@ -46,7 +46,7 @@ function updateBalance(amount, addition) {
 
 //Function for getting only the balance for withdrawal validation;
 
-function getBalance () {
+function getBalance() {
 
     const balanceID = document.getElementById('balance-text');
     const currentBalance = parseFloat(balanceID.innerText);
@@ -75,11 +75,11 @@ function init() {
 
             updateBalance(depositAmount, true);
 
-            //Complete transaction button appearing;
+            //Complete transaction button and message appearing;
 
             document.getElementById('complete-transaction').style.display = 'block';
             document.getElementById('trnx-msg').style.display = 'none';
-
+            document.getElementById('insufficient-msg').style.display = 'none';
         }
 
     })
@@ -109,6 +109,13 @@ function init() {
 
             document.getElementById('complete-transaction').style.display = 'block';
             document.getElementById('trnx-msg').style.display = 'none';
+            document.getElementById('insufficient-msg').style.display = 'none';
+
+        } else if (withdrawAmount > getBalance()) {
+
+            document.getElementById('complete-transaction').style.display = 'none';
+            document.getElementById('trnx-msg').style.display = 'none';
+            document.getElementById('insufficient-msg').style.display = 'block';
         }
     })
 };
